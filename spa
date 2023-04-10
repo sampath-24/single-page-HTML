@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width divice-width, intial-scale-1">
+    <title>Single Page Website | Minor Project</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.4/font/bootstrap-icons.min.css"
+        integrity="sha512-yU7+yXTc4VUanLSjkZq+buQN3afNA4j2ap/mxvdr440P5aW9np9vIr2JMZ2E5DuYeC9bAoH9CuCR7SJlXAa4pg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .color-teal {
+            color: teal;
+        }
+
+        .icon-lg {
+            font-size: 50px;
+        }
+
+        .icon-lg {
+            font-size: 25px;
+        }
+
+        .remove-text-decoration {
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .remove-bullets {
+            list-style: none;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABj1BMVEX/////ZgAFEFD/YgD/XAD/VwD/0sL/YAD/WwD/oQD/7ub/VgD/9/MAAEr/ngD/hgD/iwD/iFP/lgD/lQD/jwAAAEL/mgAACk7/fwD/jgD/egAAAEz/hwD/ggAAAEX/6eAAAD7/cgD/bwD/xK8AADIAADoXG1T/nXX/4tf/kWTW1t3/hk//eDX/2s3/pYFucIrq6/D/tZqam63Fxs8AADP/SAD/t5z/f0T2YQPnWwj/qon/oHr/ybWxsr98fpYAACciJ1s+QWreVwrSUw7HThK7ShawRhmkQh2TPSKKOiV3NCtVKTb/ahv9lGk/Ij0nG0VCRWygobEAAB3/8Nz/16P8wXP+zIz/6Mj/qyj/vF7/473/s0X/yIFSVXctMmH/tFX/uXX/ozP/qVb/okG5u8j/sGX/3cH/xZj/z6z/kU3/kj3/o2r/hDdmaYXlcTjklnjUazzAZUHOkHurXkblr5u3iX+VWEtvMS6AUVGYNACfg4RSKDdpS1jOqZ+LLww7IT9VRV62o6RYHSU4ACQiBTdhFHpcAAALnklEQVR4nO2ai1/bxh3Az7JkucgiOIkwYDAQ45f8km1iFogNJO26bGazkzZ9mrUpfY9169ZlW7ZmTfuH7yTdSafTyYgFUj77/L6fPLB0J933nr87gxAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPF59Nbbj9/5uQtxiWTeXlycn1989//W8fH8/Gs284vvPTpv3uFlFOiCef/dxdco8/OPM+fK3B1fUqkujkcf+H42i6+9f47c5vZVN8x8uEg6qM/1D+J31Xz+8BJLdwG8Nb/IqM0vEm68Nxcv/2FeP77cEr4c77x7fdHXYrh+48bjOA+Y6lLuChs++v2NoBbLjZuLZw/HaUG6yoYf3rjOWzHcvHlz4ckZw3GMBaVcOe4L1wkvW/CYvHX9ZsjK1mJYXlj9aMbKYUq6dB7DzG3F4XbMIf5yPPp4OWS1vLzs/muz4HJt9YuoR3RLOel8hkrCQXkFhplPF7jWWl5evfbxk09WrxGzVcq1peXPRI8YSIYreCUNHy8s8I21uub2xy8W1mwtlzWXlSdckayTYT5fPjggbSjFfO2rM/yYNpTXWNeWPqFzSuajpaU1jyWHlU3xjKPnrmYbfrq26vdBp6mWFtiOOPdkZYmyQlgSPil/NQ0fLQX74NrSyudcks/WNleC3BLON1fU8IulQBdc2fyaWRBOyP+fbwa59aXoURG9dL24l200GjtHu6ngWkMNQytQtV+p4xz1Sr86q+jN3Vo2e0Yau/CBPrj5FTvEJm36U+brxC3XzeUPsQ2LI01WkzaqmtayTWK9k81mk65hso5/rnsZMruqQnPISnKX9W/aSXHivv3gpKKqTprR3dmGTA/cXAmsBGaJ2cxWv0zc8kjENayO0sSD2GhZp8RVDQt4FzEKzdFRVDZDQlU6/uNSimMutxCqK/5DlZ1ZW1jX0O18XwXumIbeZj/v+q9ONuIZprSAn1Ni1R52VYW7nHYzZBoynyEh+y9LuXfVFmoE6kFNzlD8/JY3uDYDycxCLmiIan6txzOsaqHi4rxyJtIwk1AFOdQRLRg17Bxx6ZKJaMO+1/kSffa6HYTpp4Gkc8ovKDsRhjm9UMp7FxK0SvAYVP3q2Yk0bISa3DWiFUoME6NQRajZMw1xb/BnbWsibeEwmjNEDVvujs0fRY8yjFK5PTC9z8U0UVJ29lqtrDfAlCaq3tY0T1LRNO22naHlddGkjENy2fO1Bx5r6ErJsuybKqlIQ+8xqn/Rwn/HusT1UnR0hyI0HPaswOcd99HJBulkLeKkHjkfQ+vhuteplVpqPbOeynqVoK3zhknlqH+3WPEco/tp302CG0cNjtbDfMjwmzv3CEJDnjRngFqkOLLYsEZLK5M1BTWpkVrjDNU6Ke0eeUsiHdWIfdUbXGcb3rtP+FMMwTlq4F3JaM5kn9TmRIYZ2oSKvyf25iotEzBM+hMB7drJWpQhHVp37gRvHIZ76Tf3XyfEMVynnXLXu1TLuiv2usiwSIoqMwugt0TJxYAhGweNyDhLRxkSvXv3eMN83uBmmm9ff4Pw5xiGtA3xgibsQLwhXYwUUSK3haihWmGS3CUXlYjw7a90aN2/F7xxYIyHPc7wjV8SIgwzzX6l4ZXQnxnT6aO7ofiaN0yyLh40tkuwhukmm0Rjm1lkSMfW/eANM5z223+8SfiLSK+e0NI4ovQmNXZZxuGjWusHDp04w4y4oGQmdAciNQwG62QVVVsRht7Yel2cgOG7N39FEBrSWYFeWOdCGrzIJXZ9Sc6QDttg+/hS68yH4MpQUUWN7xt6Y+uNsw2/f0D4m8hQ4V/f4SMXXNFavcqlJ4ZNurgETxeraUacGHJBI5mNkhFhzb/p2HrzH8EbzWKlwdXKdw9+bfP06dO/xzJEnXDkjbcXrdmGwQFbZZuWGtYDSfrkqjCUxIbe2OIMcUhEgg+Pf7548RubZ8/+Fc8Q7wO1cCydrlyOYfCqb/g9HVvfB2+McB7e8LcOz58//09MQ1zCipLmJbWmwJB2R27Sp+LpKvpfe6k3th6caTj86XcuZdF3hGJDu1x7zj6f6ah1gSFdPuXg4umtdnO+YSIZSELm7MAiyfDDA3dkPX36Ihi1CQzbRtlFEn1HGGloF/9uq6H5YbMiMKTLmtoJ5KRBjZNFvFqQoIbL6Bu+cEfWs2c/BncGifD8OybH2pLwO0JaYln8IpQpevtbZ77kDUd0KxLIRa+OWEOZPZmZowtpROj9w4/uyHr+/KfuGYZWQaKGs9qQGGayNYcsM/vTAMWZNnjDPbq2s8sFnWjUPdYwMG3SVtYiTiUn3tgqG4FGDBtO9XMZko2EwtS3t92oCgxTdMPMzhg7tE5SrCG7383QbCOxIOqSsWWX+4BVDBkOvSYUfwvK91JBfdO4xanu0P6Q9uG0f5yyS5Xch/r7Q9lraHrywWxhOEO/3FK+fOLf4AzNQyZh7iCGYZ28WmZ2T7Q0zieanjayp6PskSsVur0lOypmj6+41ZCie6fIThowlHLG1Au4k0m6s7Zpb+SZdLFmmqJX/42iXeNzKXoESOZ1b0ufrew5V/wdvFLr9Ds1/+iUnLCw5zSy1sjWVe84Vo3aAKMBa4jLXmiTrjoajRJ0tTjR9UCq/DSGIT3FcM+V0szJkuYu6g3mKE5zBPxQPamyK6iWChs6J8n+h8gmRJYhBSnoXT7JeCMXTGMM4hgWw4G3m4BUXIuJddwNeistzJCm+6Lo00SlzxfHZ8gr5ozjk0CCUp5LIf6VmfB6WBEW2Dv9bDK7K3IEURFViuIFKzRqq3W4J8uRfdRmWtJ5A384WkOpwN3NFQ4s0XMEK/6uYG+h+ItB1u909JClH8qR1PzmoYZZdBSoCmWmIEK9YyMXchw6FpN8IXRLj/jlw8xt2UFjrjVHwS9a1HSCDUcq3vdSXiZuN4L3k0wA4BvijZk/DWkR8RoDFuE8pEJhOjwV+Bmnwga0KRICF1NHspK2d2KynNaSR1xklSm2svV6vXbERMDVPfs0RHYyJFqBnQZjiOaO7OfKeBKrxPqKdVjgu6qU13XeDw/R3tnP4plLFfudTv9uM/aXvU6OfjHFZ2ANkb1J73SKzVDuCMwpP2GGKeRFc+grhDM8L72D0HAMdtDCz/7bvy9piOMbPdRV/Q66MY0cgK+MlzZEVtvg1z46AMsnZ+Y27T48iExnTYaTGRnj8PKG+GVjUVfV83ycI6K9hdBxKaqlze2Nw5L47mQ/ZukuwhDHoGV+icgb7VgddLiBxhs4pdUd2gFD1/5S4MQcDN3oQbIDIWOKer3ewE7Sc5puYKGBaZ3gn02nhXHWQfTLLsbQ3m6wwzG3MRYc8AsN81O7jazS8XTfRGXpdH+A8sb4YMsusrVFumI7tz+0tnCSgfWw19vvooc93IbdUnmMUxyWTje2ol93UYbImvp7pUKMAUgNC4UNrDHBmsenJi5ou4zKhwht213c3OqhXv5gjMNcC7V1hE4lVOh2D6bmPpps2X/QRtfCdTLYfgWG9n7XHY56Ic4ApIYl6xS317BQzh2fnhhl/fgASXiFkeyvIe02NLvjY9SWEBrj3Vd3Gw2n04HRPXQMt3EX7trVYr6KNrQZSBuGMSNEE4DHIdLLaLBlDz9z30JmD5WPSRuiY8lClu4aDg0c8JdRr2CgHJ7EPEOEO+2wNMMwfYGGuB1PeudbAdt4SjT3TxHefDzsoXHp8OEEj8ay7k6glrGV3x+XUbtgD1X9YB/3/n0JneIh231o/0HbQzTc2i9vzDB0fydKjTi/v3TMHvlnMLGdBl1cVGnY69J6GkxM1HNTWZOJ7dEzkYU/4r/2f/Yn0+zN6KVXEf5XAc6gVMD70UsqyiXRPWesHhn3AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABfMfwHcjKdwnu+z2gAAAABJRU5ErkJggg=="
+                        data-deferred="1" class="rg_i Q4LuWd" jsname="Q4LuWd" height="50" alt="1Stop.ai | Facebook"
+                        data-iml="894" data-atf="true">
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar1">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar1">
+                    <div class="navbar-nav ms-auto">
+                        <a href="#" class="nav-item nav-link active">Home</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropown-toggle" data-bs-toggle="dropdown">About US</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Company</a>
+                                <a href="#" class="dropdown-item">Team</a>
+                            </div>
+
+                        </div>
+                        <a href="#" class="nav-item nav-link">Contact Us</a>
+                    </div>
+                </div>
+        </nav>
+        <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                <button typr="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://dummyimage.com/600x400/000/fff" class="d-block w-100" alt="carousel 1"
+                        style="max-height: 100vh;">
+                    </img>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <img src="https://dummyimage.com/600x400/000/fff" class="d-block w-100" alt="carousel 2"
+                          style="max-height: 100vh;">
+                        </img>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <img src="https://dummyimage.com/600x400/000/fff" class="d-block w-100" alt="carousel 3"
+                                style="max-height: 100vh;">
+                            </img>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="ms-5">
+        <section class="container m-4" id="about-us">
+            <h6 class="display-6 text-center">About Us</h6>
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="container">
+                        <img src="https://dummyimage.com/600x400/000/fff" class="d-block w-100" alt="About Us">
+
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <p class="text-black-50">
+                        There are three types of computers, which include analog, digital and hybrid computers. The
+                        speed, as well as the accuracy of each computer, is classified. The computer has several
+                        functions other than processing and storing data. It helps control the machine, organize the
+                        business, sell services and products, and definitely for academic purposes. The computer has
+                        found its way in our daily lives with its great usefulness.
+                    </p>
+                    <p>
+                        There are three types of computers, which include analog, digital and hybrid computers. The
+                        speed, as well as the accuracy of each computer, is classified. The computer has several
+                        functions other than processing and storing data. It helps control the machine, organize the
+                        business, sell services and products, and definitely for academic purposes. The computer has
+                        found its way in our daily lives with its great usefulness.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <h6 class="display-6 text-center">What Makes Us Unique</h6>
+                <div class="col-md-4">
+                    <div class="container text-center">
+                        <span class="bi bi-person color-teal icon-lg"></span>
+                        <p>Custom Tailored User Options</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="container text-center">
+                        <span class="bi bi-shield-shaded color-teal icon-lg"></span>
+                        <p>Privacy First Approch</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="container text-center">
+                        <span class="bi bi-list color-teal icon-lg"></span>
+                        <p>Multiple Variations</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="team" class="container m-4">
+            <h6 class="display-5 text-center">Our Innovative Team</h6>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 d-flex align-item-center justify-content-center">
+                        <div class="card" style="width: 300px;">
+                            <img class="card-img-top" src="https://dummyimage.com/300x300/000/fff&text=sample+image">
+                            <div class="card-body text-center">
+
+                                <h4 class="card-title">Team Member 1</h4>
+                                <p class="card-text">An electronic device used to store, display, and process data is
+                                    known as a computer"</p>
+                                <i class="bi bi-facebook icon-sm m-2"></i>
+                                <i class="bi bi-instagram icon-sm m-2"></i>
+                                <i class="bi bi-linkedin icon-sm m-2"></i>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex align-item-center justify-content-center">
+                        <div class="card" style="width: 300px;">
+                            <img class="card-img-top" src="https://dummyimage.com/300x300/000/fff&text=sample+image">
+                            <div class="card-body text-center">
+
+                                <h4 class="card-title">Team Member 1</h4>
+                                <p class="card-text">An electronic device used to store, display, and process data is
+                                    known as a computer"</p>
+                                <i class="bi bi-facebook icon-sm m-2"></i>
+                                <i class="bi bi-instagram icon-sm m-2"></i>
+                                <i class="bi bi-linkedin icon-sm m-2"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-4 d-flex align-item-center justify-content-center">
+                        <div class="card" style="width: 300px;">
+                            <img class="card-img-top" src="https://dummyimage.com/300x300/000/fff&text=sample+image">
+                            <div class="card-body text-center">
+
+                                <h4 class="card-title">Team Member 1</h4>
+                                <p class="card-text">An electronic device used to store, display, and process data is
+                                    known as a computer"</p>
+                                <i class="bi bi-facebook icon-sm m-2"></i>
+                                <i class="bi bi-instagram icon-sm m-2"></i>
+                                <i class="bi bi-linkedin icon-sm m-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="container m-4">
+            <h6 class="display-5 text-center">Contact Us</h6>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="container p-3">
+                        <p class="text-muted text-center fs-3">Here our contact info</p>
+                        <div class="text-black-5 text-center fs-4">Our Email</div>
+                        <div class="text-black-50 text-center fs-5">Support@example.com</div>
+                        <div class="text-black-5 text-center fs-4">Our Phone No.</div>
+                        <div class="text-black-50 text-center fs-5">+91 78338 98393</div>
+                        <div class="text-black-5 text-center fs-4">Our Address</div>
+                        <div class="text-black-50 text-center fs-5">HSR Layout, Benglore <br>Karnataka 580 xxx</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="container p-3">
+                        <p class="text muted text-center fs-3">You can also write to us</p>
+                        <div class="container">
+                            <div class="card shadow">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="name" class="form-label">Enter your name</label>
+                                            <input type="text" class="form-control" name="name" id="name">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Emailid" class="form-label">Enter your Email</label>
+                                            <input type="Email" class="form-control" name="Email" id="Emailid">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Subject" class="form-label">Enter your Subject</label>
+                                            <input type="Subject" class="form-control" name="Subject" id="Subject">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Message" class="form-label">Enter your Message</label>
+                                            <input type="Message" class="form-control" name="Messaage" id="Message">
+                                        </div>
+                                        <div class="form-group text-center">
+                                            <input type="Submit" class="btn btn-outline-dark" value="Send Message">
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+    </main>
+    <footer class="bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="container m-5">
+                        <img src="data:image/png;base64,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"
+                            data-deferred="1" class="bg-white" jsname="Q4LuWd" height="30px">
+                        <div>
+                            <p class="text-white">An electronic device used to store, display, and process data is known
+                                as a computer</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="container m-5">
+                        <p class="text-white fs-5">Quick Links</p>
+                        <ul class="remove-bullets remove-text-decoration">
+                            <li><a href="#" class=" remove-text-decoration text-white">About Us</a></li>
+                            <li><a href="#" class="remove-text-decoration text-white">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-white text-center">
+                    <p>All rights reserved &copy 2023, <a href="1stop.al">1stop.al</a></p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+        integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+</body>
